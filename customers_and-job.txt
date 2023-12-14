@@ -1,0 +1,30 @@
+select * from customers,
+
+insert into  customer (customers_first_name, customers_middle_initial, customers_last_name, gender, email_add, phone_number, address_line_1,address_line_2, town_city, state_country_province, country, other_details)
+values('alvin', 'D', 'Ombe', 'Male', 'psu@example.com', 09123456789,'Brgy. Kmauning Puerto Princesa City', 'Puerto Princesa City', 'palawan', 'philippines')
+
+update customers
+set customes_first_name = jake,
+where idCustomers = 1;
+
+delete customers 
+where idCustomers = 1;
+
+
+select customers.customers_first_namne, custommers.customers_last_name, Jobs.date_job_started, Jobs.date_job_completed from Customers
+join Customers on Job
+where customers_id = Jobs.customers_id;
+
+
+select concat(customers.customers_firts_name, '', customers.customers_last_name) as fullname, Jobs.date_job_started, jobs.date_job_complete, Invoices.total_cost from Customers;
+join Customers on Jobs
+where Customers.customer_id = Jobs.customer_id= Invoices.job_id; 
+
+
+update Invoices.total_cost
+set Invoices.total_cost = 200;
+join Invoices on Job 
+where Invoices.jobs_id = Jobs.job_id;
+ 
+
+
